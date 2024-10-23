@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    /* Remove as margens padrão de todos os elementos */
+    padding: 0;
+    /* Remove o preenchimento padrão de todos os elementos */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* Define uma fonte padrão para todos os textos */
+    transition: 0.2s linear;
+    /* Adiciona uma transição suave de 0.2s para mudanças nos elementos */
+}
+
+body {
+    background-color: #D5D3CA;
+    /* Define a cor de fundo da página */
+}
+
+.header {
+    grid-area: header;
+    /* Define a área da grade para o cabeçalho, mas isso só seria aplicado com o uso de grid */
+}
+
+.main {
+    grid-area: main;
+    /* Define a área da grade para o conteúdo principal */
+}
+
+.footer {
+    grid-area: footer;
+    /* Define a área da grade para o rodapé */
+}
+
+/* Definindo o layout flexível para o container */
+.container {
+    display: flex;
+    /* Usa flexbox para organizar os elementos */
+    flex-direction: column;
+    /* Alinha os elementos verticalmente */
+    min-height: 100vh;
+    /* Garante que a altura mínima do contêiner seja 100% da altura da janela */
+}
+
+header {
+    position: fixed;
+    /* Fixa o cabeçalho no topo da página */
+    top: 0;
+    /* Posiciona no topo da janela */
+    right: 0;
+    /* A linha da direita é alinhada ao lado direito da janela */
+    left: 0;
+    /* A linha da esquerda é alinhada ao lado esquerdo da janela */
+    z-index: 99;
+    /* Garante que o cabeçalho esteja acima de outros elementos */
+}
+
+.header section {
+    display: flex;
+    /* Usa flexbox para o layout dentro do cabeçalho */
+    align-items: center;
+    /* Alinha os itens no centro verticalmente */
+    justify-content: space-around;
+    /* Distribui os itens igualmente ao longo do eixo horizontal */
+    background-color: #E5322A;
+    /* Define a cor de fundo do cabeçalho */
+}
+
+.header a {
+    color: black;
+    /* Define a cor preta para os links */
+    text-decoration: none;
+    /* Remove o sublinhado dos links */
+    font-size: 20px;
+    /* Define o tamanho da fonte dos links */
+    padding: 0px 20px;
+    /* Adiciona espaçamento horizontal dentro dos links */
+}
+
+.header a:hover {
+    color: #CFB645;
+    /* Muda a cor do texto para dourado quando o usuário passa o mouse sobre o link */
+    text-decoration: underline;
+    /* Adiciona um sublinhado ao passar o mouse */
+}
+
+.logo img{
+    width: 100px;   
+    padding: 10px;
+    border-radius: 30px;
+}
+
+#darkModeToggle {
+    width: 40px;
+    /* Define a largura da imagem com o ID "lua" */
+}
+
+main {
+    min-height: 80vh;
+    /* Define a altura mínima da área principal para 80% da altura da janela */
+}
+
+.main {
+    width: 70%;
+    /* Define a largura da área principal para 70% da tela */
+    margin: auto;
+    /* Centraliza o conteúdo horizontalmente */
+}
+
+footer {
+    background-color: #000;
+    /* Define o fundo do rodapé como preto */
+}
+
+.galeria {
+    background-color: #000;
+    /* Define o fundo da galeria como preto */
+    border-radius: 15px;
+    /* Adiciona bordas arredondadas à galeria */
+    margin: 150px auto;
+    /* Adiciona uma margem superior e centraliza a galeria horizontalmente */
+    display: grid;
+    /* Usa o layout grid para organizar os itens da galeria */
+    grid-template-columns: repeat(13, 1fr);
+    /* Cria 13 colunas de tamanho igual */
+    grid-template-rows: repeat(6, auto);
+    /* Cria 6 linhas com altura automática */
+    gap: 20px;
+    /* Adiciona um espaçamento de 20px entre os itens da galeria */
+    padding: 40px;
+    /* Adiciona um espaçamento interno de 40px ao redor da galeria */
+}
+
+.item-galeria {
+    overflow: hidden;
+    /* Garante que o conteúdo que ultrapasse o limite do contêiner seja oculto */
+    position: relative;
+    /* Define uma posição relativa, útil para elementos posicionados dentro */
+}
+
+.item-galeria img {
+    width: 100%;
+    /* A imagem ocupará 100% da largura do contêiner */
+    height: 100%;
+    /* A imagem ocupará 100% da altura do contêiner */
+    object-fit: cover;
+    /* Garante que a imagem se ajuste ao contêiner, mantendo suas proporções */
+    position: relative;
+    /* Define a imagem com posição relativa para manipulações posteriores */
+}
+
+/* Definindo a posição dos itens da galeria na grade */
+.item01 {
+    grid-column: 1 / span 5;
+    /* O item 1 ocupa 5 colunas a partir da primeira */
+    grid-row: 1 / span 5;
+    /* O item 1 ocupa 5 linhas a partir da primeira */
+}
+
+.item02 {
+    grid-column: 6 / span 3;
+    /* O item 2 ocupa 3 colunas a partir da sexta */
+    grid-row: 1 / span 3;
+    /* O item 2 ocupa 3 linhas a partir da primeira */
+}
+
+.item03 {
+    grid-column: 9 / span 3;
+    /* O item 3 ocupa 3 colunas a partir da nona */
+    grid-row: 1 / span 3;
+    /* O item 3 ocupa 3 linhas a partir da primeira */
+}
+
+.item04 {
+    grid-column: 12 / span 3;
+    /* O item 4 ocupa 3 colunas a partir da 12ª */
+    grid-row: 1 / span 5;
+    /* O item 4 ocupa 5 linhas a partir da primeira */
+}
+
+.item05 {
+    grid-column: 1 / span 5;
+    /* O item 5 ocupa 5 colunas a partir da primeira */
+    grid-row: 6 / span 1.5;
+    /* O item 5 ocupa 1.5 linhas a partir da sexta */
+}
+
+.item06 {
+    grid-column: 6 / span 3;
+    /* O item 6 ocupa 3 colunas a partir da sexta */
+    grid-row: 4 / span 2;
+    /* O item 6 ocupa 2 linhas a partir da quarta */
+}
+
+.item07 {
+    grid-column: 9 / span 3;
+    /* O item 7 ocupa 3 colunas a partir da nona */
+    grid-row: 4 / span 2;
+    /* O item 7 ocupa 2 linhas a partir da quarta */
+}
+
+.item08 {
+    grid-column: 6 / span 5;
+    /* O item 8 ocupa 5 colunas a partir da sexta */
+    grid-row: 7.5 / span 1.5;
+    /* O item 8 ocupa 1.5 linhas a partir da linha 7.5 */
+}
+
+.item09 {
+    grid-column: 11 / span 4;
+    /* O item 9 ocupa 4 colunas a partir da 11ª */
+    grid-row: 9 / span 1.2;
+    /* O item 9 ocupa 1.2 linhas a partir da nona */
+}
+
+img {
+    border-radius: 15px;
+    /* Adiciona bordas arredondadas às imagens */
+    transition: 0.5s ease-in-out;
+    /* Adiciona uma transição suave para alterações */
+}
+
+img:hover {
+    transform: scale(1.2);
+    /* Aumenta o tamanho da imagem em 20% ao passar o mouse */
+}
+
+
+/* Footer */
+
+.footer {
+    background-color: black;
+    color: white;
+    height: 200px;
+}
+
+#logo_whats {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+#endereco {
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+#rede_social {
+    width: 50px;
+    float: right;
+    margin-right: 15px;
+    margin-top: -45px;
+}
+
+
+
+
+
+/* DARK MODE */
+
+.dark-mode {
+    background-color: #121211;
+    color: white;
+    
+}
+
+.dark-mode .header section{
+    background-color: #645419;
+}
+
+.dark-mode #titulos_datas{
+    color: white;
+}
+
+
+#darkModeToggle { /* Icone da lua */
+    width: 40px;
+    text-decoration: none;
+}
+
+.dark-mode .header .navbar a {
+    color: white;
+}
+
+
+/*----------*/

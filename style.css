@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: 0.2s linear;
+
+}
+
+body {
+    background-color: #D5D3CA;
+}
+
+container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 120px 2000px 200px;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+header{
+    grid-area: header;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.header section {   /* Alinha os itens no centro de forma horizontal para parecer um menu */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #E5322A;
+}
+
+.header a { /* Arruma o texto do menu */
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0px 20px;
+}
+
+.header a:hover {
+    color: #CFB645;
+    text-decoration: underline;
+}
+
+.logo img{
+    width: 100px;   
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.main {
+    grid-area: main;
+}
+
+#titulo {
+    text-align: center;
+    color: #a18728;
+    background-color: transparent;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#titulo span {
+    background-color: #f3efe1;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+
+/* Quadrados de imagem de comemorações */
+.comemoracoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    
+}
+
+.comemoracoes img {
+    width: 100px; /* Largura das imagens */
+    background-color: #fff; /* Fundo branco para as imagens */
+    border-radius: 8px; /* Bordas levemente arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil ao redor das imagens */
+    border: 5px solid #E5322A; /* Borda vermelha ao redor das imagens */
+    position: relative; /* Define posição relativa para permitir controle do layout */
+    overflow: hidden; /* Garante que o conteúdo extra das imagens não ultrapasse as bordas */
+    width: 470px; /* Largura fixa maior para as imagens */
+    display: block; /* As imagens são blocos */
+    margin: 0 auto; /* Centraliza as imagens */
+    margin-top: 50px; /* Espaço acima das imagens */
+    margin-left: 100px; /* Espaço à esquerda para ajustar a posição */
+}
+
+#titulos_datas {
+    margin-top: 50px;
+    color: #a18728;
+    text-shadow: 1px 1px black;
+}
+
+
+
+/* Footer */
+.footer {
+    grid-area: footer;
+    background-color: black;
+    color: white;
+}
+
+#logo_whats {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+#endereco {
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+#rede_social {
+    width: 50px;
+    float: right;
+    margin-right: 15px;
+    margin-top: -45px;
+}
+
+
+
+/* DARK MODE */
+
+.dark-mode {
+    background-color: #121211;
+    color: white;
+    
+}
+
+.dark-mode .header section{
+    background-color: #645419;
+}
+
+.dark-mode .header .navbar a {
+    color: white;
+}
+
+.dark-mode #titulos_datas{
+    color: white;
+}
+
+
+#darkModeToggle { /* Icone da lua */
+    width: 40px;
+    text-decoration: none;
+}
+
+
+/*----------*/
+
+
+/* SLIDER */
+
+
+.slider {
+    margin: 0 auto; 
+    width: 1000px; 
+    height: 600px; 
+    overflow: hidden; /* Oculta o conteúdo que ultrapassa os limites do container */
+    margin-top: 50px; 
+}
+
+.slides {
+    width: 400%; /* Largura total das slides para permitir rotação */
+    height: 400px; /* Altura das slides */
+    display: flex; 
+}
+
+.slides input {
+    display: none; /* Esconde os inputs de rádio que controlam o slider */
+}
+
+.slide {
+    width: 25%; /* Cada slide ocupa 25% do container */
+    position: relative; /* Posicionamento relativo para o layout interno */
+}
+
+.slide img {
+    width: 1000px; /* Largura das imagens dentro do slide */
+}
+
+.manual-navigation {
+    position: absolute; /* Navegação manual posicionada de forma absoluta dentro do slider */
+    width: 880px; /* Largura da navegação manual */
+    margin-top: 120px; 
+    margin-left: 60px;
+    display: flex; 
+    justify-content: center; 
+}
+
+.manual-btn {
+    border: 2px solid #fff;
+    padding: 5px; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    transition: 1s; /* Transição suave ao interagir */
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 50px; /* Espaço entre os botões */
+}
+
+.manual-btn:hover {
+    background-color: #fff; /* Cor de fundo muda ao passar o mouse */
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0; /* Mostra o primeiro slide quando o primeiro botão está selecionado */
+}
+
+#radio2:checked ~ .first {
+    margin-left: -25%; /* Mostra o segundo slide */
+}
+
+#radio3:checked ~ .first {
+    margin-left: -50%; /* Mostra o terceiro slide */
+}
+
+#radio4:checked ~ .first {
+    margin-left: -75%; /* Mostra o quarto slide */
+}

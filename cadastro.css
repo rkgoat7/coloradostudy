@@ -1,0 +1,97 @@
+/* Estilos gerais para o corpo da página */
+body {
+    /* Define a fonte padrão da página, utilizando uma lista de fontes para compatibilidade entre sistemas */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    /* Define a imagem de fundo da página */
+    background-image: url(/_imagens/Captura\ de\ tela\ 2024-10-21\ 134518.png); /* IMAGEM DE FUNDO */
+    background-repeat: no-repeat; /* Impede que a imagem de fundo se repita */
+    background-size: cover; /* Faz com que a imagem cubra toda a área da página, mantendo a proporção */
+
+    padding: 20px; /* Adiciona espaço interno ao redor do conteúdo da página */
+}
+
+/* Estilos para o título principal */
+h1 {
+    font-size: 30px; /* Define o tamanho da fonte do título */
+    color: white; /* Define a cor do texto como branca para melhor contraste */
+}
+
+/* Estilos para o formulário */
+form {
+    background-color: brown; /* Define a cor de fundo do formulário */
+    padding: 100px; /* Adiciona espaço interno dentro do formulário */
+    border-radius: 30px; /* Arredonda os cantos do formulário */
+    margin-left: 1200px; /* Adiciona margem à esquerda, deslocando o formulário para a direita */
+    margin-top: 200px; /* Adiciona margem acima, posicionando o formulário mais abaixo na página */
+    width: 300px; /* Define a largura do formulário */
+    height: 300px; /* Define a altura do formulário */
+}
+
+/* Estilos para a linha horizontal */
+.horizontal {
+    background-color: white; /* Define a cor da linha como branca */
+    height: 5px; /* Define a altura da linha */
+    width: 90px; /* Define a largura da linha */
+}
+
+/* Estilos para os campos de entrada (nome, email, senha) */
+#email, #nome, #senha {
+    border-radius: 10px; /* Arredonda os cantos dos campos de entrada */
+    padding: 5px; /* Adiciona espaço interno dentro dos campos */
+    border: 1px solid brown; /* Define a borda com cor marrom */
+}
+
+/* Estilos para o botão */
+button {
+    padding: 5px; /* Adiciona espaço interno dentro do botão */
+    width: 100px;
+    height: 35px; /* Define a largura do botão */
+    border-radius: 10px; /* Arredonda os cantos do botão */
+    border: 1px solid brown; /* Define a borda do botão com cor marrom */
+    transition-duration: 0.4s; /* Define a duração da transição ao passar o mouse */
+    float: right; /* Faz o botão flutuar à direita dentro do contêiner do formulário */
+}
+
+/* Estilos para o efeito ao passar o mouse sobre o botão */
+button:hover {
+    background-color: grey; /* Altera a cor de fundo do botão para cinza ao passar o mouse */
+    color: white; 
+    cursor: pointer;/* Altera a cor do texto do botão para branca ao passar o mouse */
+}
+
+/* Estilos para os campos de entrada */
+input {
+    width: 300px;
+    height: 30px; /* Define a largura dos campos de entrada */
+}
+#voltar {
+    color: white;
+
+}
+
+
+/* DARK MODE */
+
+.dark-mode {
+    background-color: #121211;
+    color: white;
+    
+}
+
+.dark-mode .header section{
+    background-color: #645419;
+}
+
+.dark-mode #titulos_datas{
+    color: white;
+}
+
+
+#darkModeToggle { /* Icone da lua */
+    width: 40px;
+    text-decoration: none;
+}
+
+
+/*----------*/
